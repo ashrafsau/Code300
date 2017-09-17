@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/uploadfile', 'UploadFileController@index')->name('upload_file');
 Route::get('/particles', 'HomeController@particles')->name('particles');
+Route::get('/result', 'ResultController@index')->name('result');

@@ -13,39 +13,13 @@
     <!-- Styles -->
     <!-- bootstrap 4.x is supported. You can also use the bootstrap css 3.3.x versions -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-<link href="{{ asset('css/fileinput.min.css') }}" media="all" rel="stylesheet" type="text/css" />
-<link href="{{ asset('css/fileinput-rtl.min.css') }}" media="all" rel="stylesheet" type="text/css" />
- <link href="{{ asset('css/fun.css') }}" rel="stylesheet" type="text/css" />
-<!-- if using RTL (Right-To-Left) orientation, load the RTL CSS file after fileinput.css by uncommenting below -->
-<!-- link href="path/to/css/fileinput-rtl.min.css" media="all" rel="stylesheet" type="text/css" /-->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<!-- piexif.min.js is only needed for restoring exif data in resized images and when you 
-    wish to resize images before upload. This must be loaded before fileinput.min.js -->
-<script src="{{ asset('js/plugins/piexif.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('themes/gly/theme.js') }}" type="text/javascript"></script>
-<!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview. 
-    This must be loaded before fileinput.min.js -->
-<script src="{{ asset('js/plugins/sortable.min.js') }}" type="text/javascript"></script>
-<!-- purify.min.js is only needed if you wish to purify HTML content in your preview for 
-    HTML files. This must be loaded before fileinput.min.js -->
-<script src="{{ asset('js/plugins/purify.min.js') }}" type="text/javascript"></script>
-<!-- popper.min.js below is needed if you use bootstrap 4.x. You can also use the bootstrap js 
-   3.3.x versions without popper.min.js. -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-<!-- bootstrap.min.js below is needed if you wish to zoom and preview file content in a detail modal
-    dialog. bootstrap 4.x is supported. You can also use the bootstrap js 3.3.x versions. -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
-<!-- the main fileinput plugin file -->
-<script src="{{ asset('js/fileinput.min.js') }}"></script>
-<script src="{{ asset('js/locales/gl.js') }}"></script>
-<!-- optionally if you need a theme like font awesome theme you can include it as mentioned below -->
-<script src="{{ asset('js/locales/fa.js') }}"></script>
-<!-- optionally if you need translation for your language then include  locale file as mentioned below -->
-<script src="{{ asset('js/(lang).js') }}"></script>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
+
 <body>
     <div>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #3399ff;">
             <div class="container">
                 <div class="navbar-header">
 
@@ -55,7 +29,7 @@
   </button>
 
                     <!-- Branding Image -->
-                    <a style="color: blue;" class="navbar-brand" href="{{ url('/') }}">
+                    <a style="color: white;" class="navbar-brand" href="{{ url('/') }}">
                         <strong>{{ config('app_dashboard.name', 'Code300') }}</strong>
                     </a>
                 </div>
@@ -65,16 +39,16 @@
                     <ul class="nav navbar-nav mr-auto">
                         
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ url('/home') }}">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" style="color: white;" href="{{ url('/home') }}">Home <span class="sr-only">(current)</span></a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" style="color: white;" href="#">Features</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/particles') }}">Have Fun</a>
+                            <a class="nav-link" style="color: white;" href="{{ url('/particles') }}">Have Fun</a>
                           </li>
                           <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" style="color: white;" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Dropdown link
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -88,11 +62,11 @@
                     <ul class="navbar-nav">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                            <li class="nav-item"><a class="nav-link" style="color: white;" href="{{ route('login') }}">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" style="color: white;" href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown nav-item">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" style="color: white;" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -119,16 +93,15 @@
         @yield('content')
     </div>
 
+    
     <!-- Scripts -->
-<script src="{{ asset('themes/gly/theme.js') }}" type="text/javascript"></script>
-<script type="text/javascript" src="{{ asset('js/sketch.min.js') }}"></script>
-    <script>
-$(document).on('ready', function() {
-    $("#input-b8").fileinput({
-        rtl: true,
-        allowedFileExtensions: ["jpg", "png", "gif"]
-    });
-});
-</script>
+<!-- bootstrap.min.js below is needed if you wish to zoom and preview file content in a detail modal
+    dialog. bootstrap 4.x is supported. You can also use the bootstrap js 3.3.x versions. -->
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
+
 </body>
 </html>

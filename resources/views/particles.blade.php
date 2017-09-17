@@ -8,6 +8,7 @@
                 background: #222;
             }
         </style>
+        <link href="{{ asset('css/fun.css') }}" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <div id="container"></div>
@@ -19,7 +20,7 @@
             </hgroup>
             <nav class="more">
                 <a href="{{ url('/home') }}" >Home</a>
-                <a href="https://github.com/soulwire/sketch.js" target="_blank">View on Github</a>
+                <a href="https://github.com/mahirsust" target="_blank">View on Github</a>
             </nav>
         </header>
         <script type="text/javascript" src="{{ asset('js/sketch.min.js') }}"></script>
@@ -164,5 +165,6 @@
         };
         
         </script>
+        <script type="text/javascript" src="{{ asset('js/sketch.min.js') }}"></script>
     </body>
 </html>
