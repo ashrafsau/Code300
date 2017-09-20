@@ -8,7 +8,7 @@
                 <div class="card-heading card-inverse card-success mb-3 text-center">
                   <header>
                     <h1 class="text-center">
-                      Result!!
+                      Extracted Keyword Using RAKE ALGORITHM!!
                     </h1>  
                   </header>
                 </div>
@@ -23,42 +23,47 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                              <th>#</th>
-                              <th>First Name</th>
-                              <th>Last Name</th>
-                              <th>Username</th>
+                              <th class="text-center">#</th>
+                              <th class="text-center">Keyword</th>
+                              <th class="text-center">Score</th>
                             </tr>
                         </thead>
+                         <?php $inc=0;  ?>
                         <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <td colspan="2">Larry the Bird</td>
-                              <td>@twitter</td>
-                            </tr>
+                           @foreach($phrases as $key => $value)
+              <tr class="default">
+                <td>
+                  <div class="text-center" style="font-size: 17px;">
+                    {{$inc=$inc+1}}
+                  </div>
+                </td>
+                <td>
+                  <div class="text-center" style="font-size: 17px;">
+                    {{$key}}
+                  </div>
+                </td>
+                <td>
+                  <div class="text-center" style="font-size: 17px;">
+                    {{$value}}
+                  </div>
+                </a>
+              </td>
+              @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    <div style="margin-top: 20px;">
+    <div style="margin-top: 50px;">
                   
     </div>
     <button type="button" class="btn btn-outline-success my-2 my-sm-0" style="margin-left: 300px;" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Choose Another Option</button>
     <button type="button" class="btn btn-outline-success my-2 my-sm-0">Compare With Previous Result</button>
 </div>
+<div style="margin-top: 50px;">
+                  
+    </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
