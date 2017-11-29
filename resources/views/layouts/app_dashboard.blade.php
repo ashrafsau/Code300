@@ -39,7 +39,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav mr-auto">
                         
-                        <li class="nav-item active">
+                        <!-- <li class="nav-item active">
                             <a class="nav-link" style="color: white;" href="{{ url('/home') }}">Home <span class="sr-only">(current)</span></a>
                           </li>
                           <li class="nav-item">
@@ -57,12 +57,12 @@
                               <a class="dropdown-item" href="#">Another action</a>
                               <a class="dropdown-item" href="#">Something else here</a>
                             </div>
-                        </li>
+                        </li> -->
                    </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav">
                         <!-- Authentication Links -->
-                        @if (Auth::guest())
+                       <!--  @if (Auth::guest())
                             <li class="nav-item"><a class="nav-link" style="color: white;" href="{{ route('login') }}">Login</a></li>
                             <li class="nav-item"><a class="nav-link" style="color: white;" href="{{ route('register') }}">Register</a></li>
                         @else
@@ -84,7 +84,7 @@
                                         </form>
                                 </div>
                             </li>
-                        @endif
+                        @endif -->
                     </ul>
                 </div>
             </div>
